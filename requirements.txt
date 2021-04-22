@@ -21,6 +21,10 @@ gcsfs
 google-cloud-storage
 mlflow
 s3fs
+streamlit
+chromedriver-binary==77.0.3865.40.0
+selenium
+beautifulsoup4
 
 # utilities
 six>=1.14
