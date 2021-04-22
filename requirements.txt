@@ -21,8 +21,8 @@ google-cloud-storage
 mlflow
 s3fs
 streamlit
-chromedriver-py==88.0.4324.96
-chromedriver-binary==88.0.4324.96
+chromedriver-py
+chromedriver-binary
 selenium
 beautifulsoup4
 

@@ -2,7 +2,7 @@
 import streamlit as st
 import pandas as pd
 from selenium import webdriver
-
+import chromedriver_binary
 import pandas as pd
 from bs4 import BeautifulSoup
 from selenium.webdriver.common.keys import Keys
