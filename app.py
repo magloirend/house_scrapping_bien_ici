@@ -23,7 +23,7 @@ def bien_ici_loc(ville,cp):
     for npage in range(1, num_pg + 1):
         url = f"https://www.bienici.com/recherche/location/{ville}-{cp}?page={npage}"
         chrome_options = Options()
-        chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+        chrome_options.binary_location = os.environ.get(GOOGLE_CHROME_BIN)
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument('--headless')
         chrome_options.add_argument('--disable-gpu')
