@@ -13,8 +13,6 @@ from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.common.by import By
 import os
 
-CHROMEDRIVER_PATH = "/app/.chromedriver/bin/chromedriver"
-GOOGLE_CHROME_BIN = "/app/.apt/usr/bin/google-chrome"
 
 
 def bien_ici_loc(ville,cp):
@@ -23,12 +21,12 @@ def bien_ici_loc(ville,cp):
     for npage in range(1, num_pg + 1):
         url = f"https://www.bienici.com/recherche/location/{ville}-{cp}?page={npage}"
         chrome_options = Options()
-        chrome_options.binary_location = os.environ.get(GOOGLE_CHROME_BIN)
+        chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument('--headless')
         chrome_options.add_argument('--disable-gpu')
         chrome_options.add_argument('--disable-dev-shm-usage')
-        driver = webdriver.Chrome(executable_path=os.environ.get(CHROMEDRIVER_PATH) ,chrome_options=chrome_options)
+        driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH") ,chrome_options=chrome_options)
         driver.get(url)
         wait = WebDriverWait(driver, 15)
         wait.until(ec.visibility_of_element_located((By.CLASS_NAME, "tt-input")))
