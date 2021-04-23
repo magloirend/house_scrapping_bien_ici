@@ -18,11 +18,11 @@ yapf
 # API
 gcsfs
 google-cloud-storage
-mlflow
 s3fs
 streamlit
 chromedriver-py
 chromedriver-binary
+webdriver-manager
 selenium
 beautifulsoup4
 
