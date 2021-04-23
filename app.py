@@ -20,12 +20,12 @@ def bien_ici_loc(ville,cp):
         url = f"https://www.bienici.com/recherche/location/{ville}-{cp}?page={npage}"
         chrome_options = Options()
         chrome_options.add_argument('--no-sandbox')
-        # chrome_options.add_argument('--headless')
+        chrome_options.add_argument('--headless')
         chrome_options.add_argument('--disable-gpu')
         chrome_options.add_argument('--disable-dev-shm-usage')
         driver = webdriver.Chrome(ChromeDriverManager().install() ,chrome_options=chrome_options)
         driver.get(url)
-        wait = WebDriverWait(driver, 60)
+        wait = WebDriverWait(driver, 15)
         wait.until(ec.visibility_of_element_located((By.CLASS_NAME, "tt-input")))
 
         soup = BeautifulSoup(driver.page_source, 'html.parser')
