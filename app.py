@@ -17,9 +17,13 @@ def bien_ici_loc(ville,cp):
     num_pg = 4
     for npage in range(1, num_pg + 1):
         url = f"https://www.bienici.com/recherche/location/{ville}-{cp}?page={npage}"
-        options = Options()
-        options.add_argument("--headless")
-        driver = webdriver.Chrome(options=options)
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument('--no-sandbox')
+        chrome_options.add_argument('--headless')
+        chrome_options.add_argument('--disable-gpu')
+        driver = webdriver.Chrome(chrome_options=chrome_options)
+        # options.add_argument("--headless")
+        # driver = webdriver.Chrome(options=options)
         driver.get(url)
         # wait = WebDriverWait(driver, 15)
         # wait.until(ec.visibility_of_element_located((By.CLASS_NAME, "tt-input")))
