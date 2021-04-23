@@ -20,9 +20,9 @@ yapf
 # google-cloud-storage
 s3fs
 streamlit
-chromedriver-py==89.0.4389.23
-chromedriver-binary==89.0.4389.23
-webdriver-manager
+chromedriver-py
+chromedriver-binary
+# webdriver-manager
 selenium
 beautifulsoup4
 
