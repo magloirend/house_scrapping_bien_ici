@@ -16,8 +16,8 @@ pytest
 yapf
 
 # API
-gcsfs
-google-cloud-storage
+# gcsfs
+# google-cloud-storage
 s3fs
 streamlit
 chromedriver-py==89.0.4389.23
