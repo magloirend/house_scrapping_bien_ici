@@ -22,7 +22,7 @@ def bien_ici_loc(ville,cp):
         chrome_options.add_argument('--headless')
         chrome_options.add_argument('--disable-gpu')
         chrome_options.add_argument('--disable-dev-shm-usage')
-        driver = webdriver.Chrome('/usr/local/bin/chromedriver',chrome_options=chrome_options)
+        driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver',chrome_options=chrome_options)
         driver.get(url)
         # wait = WebDriverWait(driver, 15)
         # wait.until(ec.visibility_of_element_located((By.CLASS_NAME, "tt-input")))
