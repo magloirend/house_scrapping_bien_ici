@@ -22,7 +22,7 @@ def bien_ici_loc(ville,cp):
         chrome_options.add_argument('--headless')
         chrome_options.add_argument('--disable-gpu')
         chrome_options.add_argument('--disable-dev-shm-usage')
-        driver = webdriver.Chrome(chrome_options=chrome_options)
+        driver = webdriver.Chrome('/usr/local/bin/chromedriver',chrome_options=chrome_options)
         # options.add_argument("--headless")
         # driver = webdriver.Chrome(options=options)
         driver.get(url)
