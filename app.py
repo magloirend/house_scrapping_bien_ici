@@ -28,8 +28,8 @@ def bien_ici_loc(ville,cp):
         chrome_options.add_argument('--disable-dev-shm-usage')
         driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH") ,chrome_options=chrome_options)
         driver.get(url)
-        # wait = WebDriverWait(driver, 15)
-        # wait.until(ec.visibility_of_element_located((By.CLASS_NAME, "tt-input")))
+        wait = WebDriverWait(driver, 15)
+        wait.until(ec.visibility_of_element_located((By.CLASS_NAME, "tt-input")))
 
         soup = BeautifulSoup(driver.page_source, 'html.parser')
         for div_p in soup.find_all(name='span', attrs={"class":'generatedTitleWithHighlight'}):
