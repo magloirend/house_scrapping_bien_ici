@@ -20,8 +20,8 @@ gcsfs
 google-cloud-storage
 s3fs
 streamlit
-chromedriver-py
-chromedriver-binary
+chromedriver-py== 90.0.4430.24
+chromedriver-binary== 90.0.4430.24
 # webdriver-manager
 selenium
 beautifulsoup4
